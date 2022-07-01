@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --very-dark-blue-card-BG-: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --font-size: 16px;
+    --font-family: Outfit, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--very-dark-blue-main-BG);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    box-sizing: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 1rem 0;
+    height: 95vh;
+}
+
+@media only screen and (min-width: 375px) {
+    main {
+        margin: auto;
+    }
+}
+
+section {
+    box-sizing: inherit;
+    background-color: var(--very-dark-blue-card-BG-);
+    max-width: 350px;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.img-container {
+    max-width: 100%;
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background-color: rgba(0, 255, 247, 0.4);
+    border-radius: 0.5rem;
+}
+
+.overlay-container img {
+    position: absolute;
+    width: 50px;
+    height: auto;
+    font-size: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.img-container:hover .overlay-container {
+    opacity: 1;
+}
+
+h1 {
+    color: var(--white);
+    cursor: pointer;
+}
+
+h1:hover {
+    color: var(--cyan);
+}
+
+p {
+    color: var(--soft-blue);
+    font-weight: 300;
+}
+
+.extra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time img, .price img {
+    vertical-align: middle;
+}
+
+.price {
+    color: var(--cyan);
+}
+
+.time {
+    color: var(--soft-blue);
+}
+
+hr {
+    border: none;
+    border-bottom: 1px solid var(--very-dark-blue-line);
+    margin: 1rem 0;
+}
+
+.author img {
+    display: inline;
+    height: 2rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.author p {
+    display: inline;
+}
+
+.author span {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.author span:hover {
+    color: var(--cyan);
+}
+
+footer {
+    height: 5h;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--white);
+ }
+
+.attribution a { 
+    color: var(--soft-blue) 
+}
